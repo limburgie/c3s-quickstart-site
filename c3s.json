@@ -1,0 +1,34 @@
+{
+	"name": "Quickstart site",
+
+	"contentRepositoryConnection": {
+		"type": "PRISMIC",
+		"repositoryId": "https://c3s-quickstart.cdn.prismic.io/api"
+	},
+
+	"templates": [
+		{
+			"name": "main",
+			"contents": "templates/main.ftl"
+		}
+	],
+
+	"pages": [
+		{
+			"friendlyUrl": "home",
+			"name": "Home",
+			"template": "main",
+			"inserts": {
+				"body": "pages/home.ftl"
+			}
+		},
+		{
+			"friendlyUrl": "news",
+			"name": "News",
+			"template": "main",
+			"inserts": {
+				"body": "pages/news.ftl"
+			}
+		}
+	]
+}
