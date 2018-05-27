@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>${site.name}</title>
+	<title>${site.name} - ${request.page.name}</title>
 
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link href="/assets/css/style.css" rel="stylesheet">
@@ -15,25 +15,25 @@
 <header>
 	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 		<div class="container">
-		<a class="navbar-brand" href="#">${site.name}</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarCollapse">
-			<ul class="navbar-nav ml-auto">
-				<#list site.pages as page>
-				<li class="nav-item <#if page == request.page>active</#if>">
-					<a class="nav-link" href="${page.friendlyUrl}">${page.name}</a>
-				</li>
-				</#list>
-			</ul>
-		</div>
+			<a class="navbar-brand" href="/">${site.name}</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav ml-auto">
+					<#list site.pages as page>
+					<li class="nav-item <#if page == request.page>active</#if>">
+						<a class="nav-link" href="${page.friendlyUrl}">${page.name}</a>
+					</li>
+					</#list>
+				</ul>
+			</div>
 		</div>
 	</nav>
 </header>
 
 <main role="main" class="container">
-	<h1 class="mt-5">${request.page.name}</h1>
+	<h1 class="mt-2 mt-sm-3 mt-md-5">${request.page.name}</h1>
 
 	${inserts.body}
 </main>
