@@ -13,6 +13,14 @@
 		}
 	],
 
+	"errorPage": {
+		"name": "Error",
+		"template": "main",
+		"inserts": {
+			"body": "pages/error.ftl"
+		}
+	},
+
 	"pages": [
 		{
 			"friendlyUrl": "home",
