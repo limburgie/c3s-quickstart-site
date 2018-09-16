@@ -4,6 +4,8 @@
 
 <ul>
 <#list api.query("news").findAll() as item>
-	<li>${item.getText("title")}</li>
+	<li data-c3s-id="${item.id}">
+		${item.getText("title")}
+	</li>
 </#list>
 </ul>
